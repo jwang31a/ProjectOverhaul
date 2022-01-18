@@ -7,3 +7,6 @@ Developed player character.
 Worked on maze generation (incomplete).
 
 Timeline:
+Maze generation finished by Wednesday.
+Graphical updates Thursday.
+Finishing touches before Friday.
