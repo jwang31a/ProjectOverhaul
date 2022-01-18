@@ -1,3 +1,9 @@
-1/31/22 12:20 PM
+1/13/22 12:20 PM
 Brainstormed ideas for the project, submitted googform, formed team
 Drafted proposal, idea for maze, as well as possible additions
+
+1/18/22 12:30 PM
+Developed player character.
+Worked on maze generation (incomplete).
+
+Timeline:
