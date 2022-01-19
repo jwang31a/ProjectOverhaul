@@ -8,5 +8,5 @@ Worked on maze generation (incomplete).
 
 Timeline:
 Maze generation finished by Wednesday.
-Graphical updates Thursday.
+Graphical updates Thursday. (ASCII symbols?)
 Finishing touches before Friday.
