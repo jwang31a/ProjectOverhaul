@@ -42,17 +42,17 @@ tales of wisdom gained...
 yyyy-mm-dd
 --------------------------------------------------------------
 <Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
-==============================================================
-
-1/13/22 12:20 PM
+2022/01/13 12:20 PM
 Brainstormed ideas for the project, submitted googform, formed team
 Drafted proposal, idea for maze, as well as possible additions
 
-1/18/22 12:30 PM
+2022/01/18 12:30 PM
 Developed player character.
 Worked on maze generation (incomplete).
+
+2022/01/19 12:30 PM
+Worked on displaying maze to player. (no terminal graphics yet)
+==============================================================
 
 Timeline:
 Maze generation finished by Wednesday.
