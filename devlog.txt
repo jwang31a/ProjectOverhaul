@@ -43,16 +43,39 @@ yyyy-mm-dd
 --------------------------------------------------------------
 <Member> :: <Thing member did.>
 2022/01/13 12:20 PM
+--------------------------------------------------------------
 Brainstormed ideas for the project, submitted googform, formed team
 Drafted proposal, idea for maze, as well as possible additions
 
+2022/01/17 5:00 PM
+--------------------------------------------------------------
+Jomin: Developed player character.
+All: Worked on maze generation (incomplete).
+All: Implemented v0
+All: Teamflag
+All: Finalized proposal
+
 2022/01/18 12:30 PM
-Developed player character.
-Worked on maze generation (incomplete).
+--------------------------------------------------------------
+All: Implemented v1: completing maze generation
+
+2022/01/18 5:00 pm
+--------------------------------------------------------------
+All: Marked up maze generation; player is indicated with 3 and 1 is for unknown
+All: UML
 
 2022/01/19 12:30 PM
-Worked on displaying maze to player. (no terminal graphics yet)
-==============================================================
+--------------------------------------------------------------
+All: Fixed some bugs concering the maze; lots of mazes ended up being stuck in deadends
+All: Created starting paths within the maze
+All: Begun to work on v2
+
+
+2022/01/19 10:00 PM
+--------------------------------------------------------------
+Kevin : Created escape paths for win condition, implemented vision of surroundings in maze, changed player
+location from 3 to !, unknowns from 1 to ?, walls from 2 to X, and open paths from 0 to O (all in v2)
+
 
 Timeline:
 Maze generation finished by Wednesday.
