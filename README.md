@@ -1,7 +1,7 @@
 # ProjectOverhaul
-~Jomin Zhang~
-~Kevin Xiao~
-~Jun Hong Wang~
+Jomin Zhang \
+Kevin Xiao \
+Jun Hong Wang
 
 # Random Forest
 
