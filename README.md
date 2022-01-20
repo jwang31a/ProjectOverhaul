@@ -9,4 +9,4 @@ Generates a maze with the player being labelled as ! spawning in the middle of t
 
 # How-To-Play
 
-In terminal, type javac Woo.java and then java Woo. Enter w, a, s, or d to go in the direction corresponding to the key. 
+In terminal, type javac Player.java and javac Woo.java and then java Woo. Enter w, a, s, or d to go in the direction corresponding to the key. 
