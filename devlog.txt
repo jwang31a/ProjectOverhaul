@@ -75,10 +75,13 @@ All: Begun to work on v2
 Kevin : Created escape paths for win condition, implemented vision of surroundings in maze, changed player
 location from 3 to !, unknowns from 1 to ?, walls from 2 to X, and open paths from 0 to O (all in v2)
 
-2022/01/19 12:30 PM
+2022/01/20 12:30 PM
 All: Created v3, with new monster functionality.
 All: Worked on monster, monster will chase player, but not connected to game yet.
 All: Separated the game method into its own class, but it's not used yet.
+
+2022/01/20 5:40 PM
+Jun Hong: Made team flag (better late than never?) and renamed flow chart.
 
 Timeline:
 Maze generation finished by Wednesday.

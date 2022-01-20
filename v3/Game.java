@@ -1,22 +1,15 @@
 public class Game extends Player{
-  public Game{
+  private String[][] board;
+  private boolean[][] wall;
+  private boolean[][] permanent;
+  private boolean escape = false;
+  private boolean caught = false;
+  private int xPos;
+  private int yPos;
+  public Game(){
     super();
   }
   public void game(){
-    String direction = "";
-// Manually generated "Walls" for testing
-    print();
-    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-    while (escape == false){
-      try {
-        System.out.println("\nWhere do you want to move?");
-        System.out.println("\tW: Up. \n\tA: Left.\n\tS: Down.\n\tD: Right.");
-        direction = reader.readLine();
-      }
-      catch (IOException e ){ }
-
-      // Move Up
-      int ytemp = yPos;  public void game(){
     String direction = "";
 // Manually generated "Walls" for testing
     print();
