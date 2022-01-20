@@ -38,7 +38,7 @@ public class Woo {
   }
 
   public static void main(String[] args) {
-    Woo test = new Woo();
+    Player test = new Player();
     test.generate();
     test.print();
   }
