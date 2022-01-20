@@ -14,6 +14,17 @@ public class Game{
     game();
   }
 
+  //one way for java to wait?
+  //Thread.sleep(int millis), parameter is int, and will be milliseconds
+  //program pauses? not sure what exactly happens here, but it seems to work.
+  public static void waiter(int millis) {
+    try {
+      Thread.sleep(millis);
+    } catch(InterruptedException ex) {
+      Thread.currentThread().interrupt();
+    }
+  }
+
   //maze generation
   public void generate() {
     boolean endgame = false;
@@ -184,5 +195,19 @@ public class Game{
       }
     }
     System.out.println("You escaped the maze!");
+    waiter(1000);
+    System.out.println("Thank you for playing our maze!");
+    waiter(1000);
+    System.out.println("We hoped you enjoyed playing!");
+    waiter(1000);
+    System.out.println("Created by: Project Overhaul");
+    waiter(1000);
+    System.out.println("Credits:");
+    waiter(1000);
+    System.out.println("Kevin Xiao");
+    waiter(1000);
+    System.out.println("Jomin Zhang");
+    waiter(1000);
+    System.out.println("Jun Hong Wang");
   }
 }

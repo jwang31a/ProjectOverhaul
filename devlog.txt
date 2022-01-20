@@ -1,4 +1,4 @@
-<Team Name>
+Project Overhaul
 Jun Hong Wang
 Kevin Xiao
 Jomin Zhang
@@ -20,10 +20,18 @@ maybe some of these will move into the Obs.Ovrcm section...
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 wow! oo!...
+We learned about a wait method, using Thread.sleep(int millis).
+When we were making the ending scene, we wanted to make the end credits roll, but not all at once.
+We went on StackOverflow, and found this post:
+https://stackoverflow.com/questions/24104313/how-do-i-make-a-delay-in-java#:~:text=193-,Use%20Thread.,that%20the%20program%20will%20pause.
+There were a lot of ways to make the program pause for a moment, but we found this one the simplest, since we pretty much only had to make a basic method, using something we thought was fairly simple.
+It was also the one that was recommended the most, so we thought it was probably the best one.
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 we changed ___ to ___ bc...
+In the beginning, we had most of our methods in Player.java, but as we created new versions, we gradually moved them away, with only accessor and set methods in Player.java.
+The bulk of the stuff moved went to Game.java.
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -76,12 +84,19 @@ Kevin : Created escape paths for win condition, implemented vision of surroundin
 location from 3 to !, unknowns from 1 to ?, walls from 2 to X, and open paths from 0 to O (all in v2)
 
 2022/01/20 12:30 PM
+--------------------------------------------------------------
 All: Created v3, with new monster functionality.
 All: Worked on monster, monster will chase player, but not connected to game yet.
 All: Separated the game method into its own class, but it's not used yet.
 
 2022/01/20 5:40 PM
+--------------------------------------------------------------
 Jun Hong: Made team flag (better late than never?) and renamed flow chart.
+
+2022/01/20 6:40 PM
+--------------------------------------------------------------
+Jun Hong: Made v4, with classes in all the right places, planned to add ending "cut scene"
+Jun Hong: Created rudimentary cutscene, using a version of a wait command to time the ending (only credits for now)
 
 Timeline:
 Maze generation finished by Wednesday.
