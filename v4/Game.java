@@ -114,7 +114,10 @@ public class Game{
   public void game(){
     Player gamer = new Player();
     String direction = "";
-    // Manually generated "Walls" for testing
+    long timeBegin = System.currentTimeMillis();
+    Monster monkey = new Monster();
+    int moves = 0;
+    //will gather player input
     print();
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     while (gamer.getWin() == false){
@@ -135,8 +138,8 @@ public class Game{
           print();
           System.out.println("A wall blocks you");
           continue;
-        }
-        gamer.setYPos(-1);
+        } else
+          gamer.setYPos(-1);
       }
       // Move Left
       else if (direction.compareTo("a") == 0){
@@ -145,8 +148,8 @@ public class Game{
           board[gamer.getYPos()][gamer.getXPos() - 1] = "X";
           System.out.println("A wall blocks you");
           continue;
-        }
-        gamer.setXPos(-1);
+        } else
+          gamer.setXPos(-1);
       }
       // Move Down
       else if (direction.compareTo("s") == 0){
@@ -155,8 +158,8 @@ public class Game{
           print();
           System.out.println("A wall blocks you");
           continue;
-        }
-        gamer.setYPos(1);
+        } else
+          gamer.setYPos(1);
       }
       // Move Right
       else {
@@ -165,34 +168,45 @@ public class Game{
           print();
           System.out.println("A wall blocks you");
           continue;
-        }
-        gamer.setXPos(1);
+        } else
+          gamer.setXPos(1);
       }
       String temp = board[gamer.getYPos()][gamer.getXPos()];
       board[ytemp][xtemp] = "O";
       board[gamer.getYPos()][gamer.getXPos()] = "!";
       // vision
       for (int i = -2;i <=2; i++){
-          for(int k = -2;k <=2; k++){
-              if ((gamer.getXPos() + k <= 24) && (gamer.getXPos() + k >= 0) && (gamer.getYPos() + i <= 24) && (gamer.getYPos() + i >= 0) && (board[gamer.getYPos()+i][gamer.getXPos()+k] == "?") && (wall[gamer.getYPos()+i][gamer.getXPos()+k] == true)){
-                  board[gamer.getYPos()+i][gamer.getXPos()+k] = "X";
-              }
-              if ((gamer.getXPos() + k <= 24) && (gamer.getXPos() + k >= 0) && (gamer.getYPos() + i <= 24) && (gamer.getYPos() + i >= 0) && (board[gamer.getYPos()+i][gamer.getXPos()+k] == "?") && (wall[gamer.getYPos()+i][gamer.getXPos()+k] == false)){
-                  board[gamer.getYPos()+i][gamer.getXPos()+k] = "O";
-              }
+        for(int k = -2;k <=2; k++){
+          if ((gamer.getXPos() + k <= 24) && (gamer.getXPos() + k >= 0) && (gamer.getYPos() + i <= 24) && (gamer.getYPos() + i >= 0) && (board[gamer.getYPos()+i][gamer.getXPos()+k] == "?") && (wall[gamer.getYPos()+i][gamer.getXPos()+k] == true)){
+            board[gamer.getYPos()+i][gamer.getXPos()+k] = "X";
           }
+          if ((gamer.getXPos() + k <= 24) && (gamer.getXPos() + k >= 0) && (gamer.getYPos() + i <= 24) && (gamer.getYPos() + i >= 0) && (board[gamer.getYPos()+i][gamer.getXPos()+k] == "?") && (wall[gamer.getYPos()+i][gamer.getXPos()+k] == false)){
+            board[gamer.getYPos()+i][gamer.getXPos()+k] = "O";
+          }
+        }
       }
-
-      //monster catches
-      if (gamer.getCaught() == true){
-        System.out.println("You have been caught by the monster!");
-        break;
+      //displays the monster as a star
+      board[monkey.getYPos()][monkey.getXPos()] = "*";
+      //condition so that player doesn't die at center of map, where monster will be at the start
+      if (gamer.getXPos() != 12 && gamer.getYPos() != 12) {
+        //makes sure that the monster only begins moving after a certain amount of moves
+        if (moves >= 9) {
+          //movement of Monster
+          monkey.chase(gamer);
+        }
+        //monster catches
+        if (gamer.getCaught() == true){
+          System.out.println("You have been caught by the monster!");
+          break;
+        }
       }
       print();
       // If Player makes it to the edge of the map they have escaped!
       if (gamer.getXPos() == 0 || gamer.getXPos() == 24 || gamer.getYPos() == 0 || gamer.getYPos() == 24){
         gamer.setEscape(true);
+        break;
       }
+      moves++;
     }
     System.out.println("You escaped the maze!");
     waiter(1000);
