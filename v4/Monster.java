@@ -1,8 +1,10 @@
 public class Monster {
-  private int xPos, yPos;
+  private int xPos, yPos, xTemp, yTemp;
   public Monster() {
     xPos = 12;
     yPos = 12;
+    xTemp = 12;
+    yTemp = 12;
   }
 
   public int getXPos() {
@@ -13,9 +15,19 @@ public class Monster {
     return yPos;
   }
 
+  public int getXTemp() {
+    return xTemp;
+  }
+
+  public int getYTemp() {
+    return yTemp;
+  }
+
   public void chase(Player input) {
     int pXPos = input.getXPos();
     int pYPos = input.getYPos();
+    xTemp = xPos;
+    yTemp = yPos;
     int randomness = (int)(Math.random()*100);
     if (randomness < 35) {
       if (xPos < pXPos) {
@@ -58,7 +70,7 @@ public class Monster {
         xPos++;
       }
     }
-    if (xPos == pXPos && yPos == pYPos){
+    if ((xPos == pXPos && yPos == pYPos) || ((xPos == input.getXTemp() && yPos == input.getYTemp() ) && (xTemp == input.getXPos() && yTemp == input.getYPos()))) {
       input.setCaught();
     }
   }

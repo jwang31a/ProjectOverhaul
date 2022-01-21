@@ -129,8 +129,8 @@ public class Game{
       catch (IOException e ){ }
 
       // Move Up
-      int ytemp = gamer.getYPos();
-      int xtemp = gamer.getXPos();
+      gamer.setYTemp(gamer.getYPos());
+      gamer.setXTemp(gamer.getXPos());
       permanent[gamer.getYPos()][gamer.getXPos()] = true;
       if (direction.compareTo("w") == 0){
         if (wall[gamer.getYPos()-1][gamer.getXPos()] == true){
@@ -172,7 +172,7 @@ public class Game{
           gamer.setXPos(1);
       }
       String temp = board[gamer.getYPos()][gamer.getXPos()];
-      board[ytemp][xtemp] = "O";
+      board[gamer.getYTemp()][gamer.getXTemp()] = "O";
       board[gamer.getYPos()][gamer.getXPos()] = "!";
       // vision
       for (int i = -2;i <=2; i++){
@@ -186,17 +186,21 @@ public class Game{
         }
       }
       //displays the monster as a star
-      board[monkey.getYPos()][monkey.getXPos()] = "*";
       //condition so that player doesn't die at center of map, where monster will be at the start
       if (gamer.getXPos() != 12 && gamer.getYPos() != 12) {
         //makes sure that the monster only begins moving after a certain amount of moves
-        if (moves >= 9) {
+        if (moves >= 7) {
           //movement of Monster
+          String boardTemp = board[monkey.getYPos()][monkey.getXPos()];
+          board[monkey.getYPos()][monkey.getXPos()] = "*";
+          board[monkey.getYTemp()][monkey.getXTemp()] = boardTemp;
           monkey.chase(gamer);
         }
         //monster catches
         if (gamer.getCaught() == true){
           System.out.println("You have been caught by the monster!");
+          waiter(1000);
+          System.out.println("sucks to suck");
           break;
         }
       }
@@ -204,24 +208,24 @@ public class Game{
       // If Player makes it to the edge of the map they have escaped!
       if (gamer.getXPos() == 0 || gamer.getXPos() == 24 || gamer.getYPos() == 0 || gamer.getYPos() == 24){
         gamer.setEscape(true);
+        System.out.println("You escaped the maze!");
+        waiter(1000);
+        System.out.println("Thank you for playing our maze!");
+        waiter(1000);
+        System.out.println("We hoped you enjoyed playing!");
+        waiter(1000);
+        System.out.println("Created by: Project Overhaul");
+        waiter(1000);
+        System.out.println("Credits:");
+        waiter(1000);
+        System.out.println("Kevin Xiao");
+        waiter(1000);
+        System.out.println("Jomin Zhang");
+        waiter(1000);
+        System.out.println("Jun Hong Wang");
         break;
       }
       moves++;
     }
-    System.out.println("You escaped the maze!");
-    waiter(1000);
-    System.out.println("Thank you for playing our maze!");
-    waiter(1000);
-    System.out.println("We hoped you enjoyed playing!");
-    waiter(1000);
-    System.out.println("Created by: Project Overhaul");
-    waiter(1000);
-    System.out.println("Credits:");
-    waiter(1000);
-    System.out.println("Kevin Xiao");
-    waiter(1000);
-    System.out.println("Jomin Zhang");
-    waiter(1000);
-    System.out.println("Jun Hong Wang");
   }
 }
