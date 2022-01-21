@@ -22,10 +22,8 @@ COOL STUFF LEARNED
 wow! oo!...
 We learned about a wait method, using Thread.sleep(int millis).
 When we were making the ending scene, we wanted to make the end credits roll, but not all at once.
-We went on StackOverflow, and found this post:
-https://stackoverflow.com/questions/24104313/how-do-i-make-a-delay-in-java#:~:text=193-,Use%20Thread.,that%20the%20program%20will%20pause.
-There were a lot of ways to make the program pause for a moment, but we found this one the simplest, since we pretty much only had to make a basic method, using something we thought was fairly simple.
-It was also the one that was recommended the most, so we thought it was probably the best one.
+We used the wait method given from the piazza post at:
+
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
