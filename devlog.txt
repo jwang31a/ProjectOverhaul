@@ -103,8 +103,9 @@ All: Also fixed bug where game would end after a certain amount of turns.
 
 2022/01/23 7:15 PM
 --------------------------------------------------------------
-Kevin: Created secret ending.
-Jomin: Updated UML diagram.
+Kevin: Created secret ending...?
+Jomin: Updated UML diagram, flowcharts.
+Jun Hong: Updated README.md.
 
 
 Timeline:
