@@ -21,9 +21,12 @@ Monster.java contains the instance variables associated with the monster, like p
 
 # How-To-Play
 
-To start the program, go into v4 of the project, and type in the terminal javac Woo.java, then java Woo.
+To start the program, type in the terminal javac Woo.java, then java Woo.
 At the beginning of the maze, the maze displayed will only be square of ?, representing tiles where the player has not gone to, and the player with a !.
 The player will input w, a, s, or d to go in each of the four directions.
 Every time the player moves (onto an open spot), the monster will move and chase the player.
 If the monster gets to the player successfully, the player will be caught, and the game will be over.
 If the player makes it out of the maze successfully, then the player wins. 
+
+If you manage to step on enough of the open spaces, you will unlock a secret ending when you escape
+(Or you can just type in 0 if u dont have that kind of time)
