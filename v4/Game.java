@@ -219,7 +219,7 @@ public class Game{
                  
       for (int i = 0; i < secretending.length; i++){
         for (int j = 0; j < secretending[i].length; j ++){
-          if (secret[i][j] == true){
+          if (secretending[i][j] == true){
             count ++;
           }
         }
