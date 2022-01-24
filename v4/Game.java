@@ -166,11 +166,12 @@ public class Game{
         } else
           gamer.setYPos(1);
       } 
-      if (direction.compareTo("0") == 0){
+      else if (direction.compareTo("0") == 0){
         secret = true;
+        continue;
       }
       // Move Right
-      else {
+      else if (direction.compareTo("d") == 0){
         if (wall[gamer.getYPos()][gamer.getXPos()+1] == true){
           board[gamer.getYPos()][gamer.getXPos() + 1] = "X";
           print();
@@ -178,6 +179,8 @@ public class Game{
           continue;
         } else
           gamer.setXPos(1);
+      } else {
+        System.out.println("Please enter w,a,s, or d to move);
       }
       String temp = board[gamer.getYPos()][gamer.getXPos()];
       board[gamer.getYTemp()][gamer.getXTemp()] = "O";
