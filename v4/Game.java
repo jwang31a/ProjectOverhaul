@@ -232,35 +232,35 @@ public class Game{
       if ((gamer.getXPos() == 0 || gamer.getXPos() == 24 || gamer.getYPos() == 0 || gamer.getYPos() == 24 && secret == true) || direction.compareTo("0") == 0){
         gamer.setEscape(true);
         System.out.println("They have come a long way from home.");
-        waiter(5000);
+        waiter(3000);
         System.out.println("Shush, they have gained enlightenment.");
-        waiter(5000);
+        waiter(3000);
         System.out.println("You mean they can see us?");
-        waiter(5000);
+        waiter(2000);
         System.out.println("No, perhaps that flimsy primitive machine of theirs has not reached that level.");
         waiter(5000);
         System.out.println("Have they figured it out?");
-        waiter(5000);
+        waiter(2000);
         System.out.println("I don't think so. Perchance they might understand a little more than before.");
         waiter(5000);
         System.out.println("Surely not, they are only a mere mortal.");
         waiter(5000);
         System.out.println("But then again...");
-        waiter(5000);
+        waiter(1000);
         System.out.println("QUIET");
-        waiter(5000);
+        waiter(3000);
         System.out.println("Whatever the reason, they have decided to visit, it should be applauded");
-        waiter(5000);
+        waiter(4000);
         System.out.println("Then a toast to their bravery, their chivalry, and their foolishness");
-        waiter(5000);
+        waiter(4000);
         System.out.println("For once, we see eye to eye");
-        waiter(5000);
+        waiter(2000);
         System.out.println("Thanks to them.");
-        waiter(5000);
+        waiter(2000);
         System.out.println("It's time.");
-        waiter(5000);
+        waiter(2000);
         System.out.println("Let's go then, back to the forest.");
-        waiter(5000);
+        waiter(2000);
         break;
       }
         
