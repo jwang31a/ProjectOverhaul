@@ -216,7 +216,7 @@ public class Game{
         }
       }
       print();
-      if ((gamer.getXPos() == 0 || gamer.getXPos() == 24 || gamer.getYPos() == 0 || gamer.getYPos() == 24) {
+      if (gamer.getXPos() == 0 || gamer.getXPos() == 24 || gamer.getYPos() == 0 || gamer.getYPos() == 24) {
         for (int i = 0; i < secretending.length; i++){
           for (int j = 0; j < secretending[i].length; j ++){
             if (secretending[i][j] == true){
