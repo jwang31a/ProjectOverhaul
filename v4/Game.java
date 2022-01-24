@@ -225,7 +225,7 @@ public class Game{
       }
                  
       // Secret Ending
-      if (gamer.getXPos() == 0 || gamer.getXPos() == 24 || gamer.getYPos() == 0 || gamer.getYPos() == 24) && secret == true){
+      if (gamer.getXPos() == 0 || gamer.getXPos() == 24 || gamer.getYPos() == 0 || gamer.getYPos() == 24) || secret == true){
         gamer.setEscape(true);
         System.out.println("They have come a long way from home.");
         waiter(1000);
