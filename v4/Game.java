@@ -180,7 +180,7 @@ public class Game{
         } else
           gamer.setXPos(1);
       } else {
-        System.out.println("Please enter w,a,s, or d to move);
+        System.out.println("Please enter w,a,s, or d to move");
       }
       String temp = board[gamer.getYPos()][gamer.getXPos()];
       board[gamer.getYTemp()][gamer.getXTemp()] = "O";
