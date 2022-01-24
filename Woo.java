@@ -1,8 +1,6 @@
 public class Woo {
   public static void main(String[] args) {
-    Player test = new Player();
-    test.generate();
-    test.game();
-    test.print();
+    //this driver file only accesses the game, and everything else will be in game
+    Game maze = new Game();
   }
 }
