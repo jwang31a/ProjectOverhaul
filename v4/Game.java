@@ -165,7 +165,8 @@ public class Game{
           continue;
         } else
           gamer.setYPos(1);
-      } else if (direction.compareTo("0") == 0){
+      } 
+      if (direction.compareTo("0") == 0){
         secret = true;
       }
       // Move Right
