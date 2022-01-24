@@ -261,6 +261,7 @@ public class Game{
         waiter(1000);
         System.out.println("Let's go then, back to the forest.");
         waiter(1000);
+      }
         
       
       // If Player makes it to the edge of the map they have escaped!
