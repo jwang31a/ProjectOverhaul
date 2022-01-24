@@ -96,6 +96,17 @@ Jun Hong: Made team flag (better late than never?) and renamed flow chart.
 Jun Hong: Made v4, with classes in all the right places, planned to add ending "cut scene"
 Jun Hong: Created rudimentary cutscene, using a version of a wait command to time the ending (only credits for now)
 
+2022/01/21 12:30 PM
+--------------------------------------------------------------
+All: Fixed bug where multiple monsters would be shown to the player.
+All: Also fixed bug where game would end after a certain amount of turns.
+
+2022/01/23 7:15 PM
+--------------------------------------------------------------
+Kevin: Created secret ending.
+Jomin: Updated UML diagram.
+
+
 Timeline:
 Maze generation finished by Wednesday.
 Graphical updates Thursday. (ASCII symbols?)
