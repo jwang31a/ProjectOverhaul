@@ -168,7 +168,6 @@ public class Game{
       } 
       else if (direction.compareTo("0") == 0){
         secret = true;
-        continue;
       }
       // Move Right
       else if (direction.compareTo("d") == 0){
@@ -262,6 +261,7 @@ public class Game{
         waiter(10000);
         System.out.println("Let's go then, back to the forest.");
         waiter(10000);
+        break;
       }
         
       
