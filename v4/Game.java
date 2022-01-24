@@ -136,7 +136,7 @@ public class Game{
       // Move Up
       gamer.setYTemp(gamer.getYPos());
       gamer.setXTemp(gamer.getXPos());
-      permanent[gamer.getYPos()][gamer.getXPos()] = true;
+      secretending[gamer.getYPos()][gamer.getXPos()] = true;
       if (direction.compareTo("w") == 0){
         if (wall[gamer.getYPos()-1][gamer.getXPos()] == true){
           board[gamer.getYPos() - 1][gamer.getXPos()] = "X";
