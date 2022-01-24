@@ -4,12 +4,16 @@ import java.util.*;
 public class Game{
   private String[][] board;
   private boolean[][] wall;
-  private boolean[][] permanent;
-
+  private boolean[][] secretending;
+  private boolean secret;
+  private int count;
+  
   public Game() {
     board = new String[25][25];
     wall = new boolean[25][25];
-    permanent = new boolean[25][25];
+    secretending = new boolean[25][25];
+    count = 0;
+    secret = false;
     generate();
     game();
   }
@@ -36,7 +40,7 @@ public class Game{
       for (int j = 0; j < board[i].length; j++) {
         board[i][j] = "?";
         wall[i][j] = true;
-        permanent[i][j] = false;
+        secretending[i][j] = false;
       }
     }
     board[x][y] = "!";
@@ -121,6 +125,7 @@ public class Game{
     print();
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     while (gamer.getWin() == false){
+      secretending[gamer.getYPos()][gamer.getXPos()] = true;
       try {
         System.out.println("\nWhere do you want to move?");
         System.out.println("\tW: Up. \n\tA: Left.\n\tS: Down.\n\tD: Right.");
@@ -160,6 +165,8 @@ public class Game{
           continue;
         } else
           gamer.setYPos(1);
+      } else if (direction.compareTo("0") == 0{
+        secret = true;
       }
       // Move Right
       else {
@@ -205,8 +212,55 @@ public class Game{
         }
       }
       print();
+                 
+      for (int i = 0; i < secretending.length; i++){
+        for (int j = 0; j < secretending[i].length; j ++){
+          if (secret[i][j] == true){
+            count ++;
+          }
+        }
+      }
+      if (count >= 50){
+        secret = true;
+      }
+                 
+      // Secret Ending
+      if (gamer.getXPos() == 0 || gamer.getXPos() == 24 || gamer.getYPos() == 0 || gamer.getYPos() == 24) && secret == true){
+        gamer.setEscape(true);
+        System.out.println("They have come a long way from home.");
+        waiter(1000);
+        System.out.println("Shush, they have gained enlightenment.");
+        waiter(1000);
+        System.out.println("You mean they can see us?");
+        waiter(1000);
+        System.out.println("No, perhaps that flimsy primitive machine of theirs has not reached that level.");
+        waiter(1000);
+        System.out.println("Have they figured it out?");
+        waiter(1000);
+        System.out.println("I don't think so. Perchance they might understand a little more than before.");
+        waiter(1000);
+        System.out.println("Surely not, they are only a mere mortal.");
+        waiter(1000);
+        System.out.println("But then again...");
+        waiter(1000);
+        System.out.println("QUIET");
+        waiter(1000);
+        System.out.println("Whatever the reason, they have decided to visit, it should be applauded");
+        waiter(1000);
+        System.out.println("Then a toast to their bravery, their chivalry, and their foolishness");
+        waiter(1000);
+        System.out.println("For once, we see eye to eye");
+        waiter(1000);
+        System.out.println("Thanks to them.");
+        waiter(1000);
+        System.out.println("It's time.");
+        waiter(1000);
+        System.out.println("Let's go then, back to the forest.");
+        waiter(1000);
+        
+      
       // If Player makes it to the edge of the map they have escaped!
-      if (gamer.getXPos() == 0 || gamer.getXPos() == 24 || gamer.getYPos() == 0 || gamer.getYPos() == 24){
+      else if (gamer.getXPos() == 0 || gamer.getXPos() == 24 || gamer.getYPos() == 0 || gamer.getYPos() == 24){
         gamer.setEscape(true);
         System.out.println("You escaped the maze!");
         waiter(1000);
